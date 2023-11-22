@@ -1,0 +1,8 @@
+apiVersion: v2
+name: zitadel
+description: Zitadel OICD Provider
+version: "1.0.0"
+dependencies:
+- name: zitadel
+  version: "7.3.0"
+  repository: "https://charts.zitadel.com"

@@ -1,0 +1,13 @@
+postgresql:
+  global:
+    storageClass: "local-path"
+    postgresql:
+      auth:
+        username: "zitadel"
+        database: "zitadel"
+        existingSecret: postgres-secret
+        secretKeys:
+          adminPasswordKey: adminPassword
+          userPasswordKey: userPassword
+  networkPolicy:
+    enabled: true
