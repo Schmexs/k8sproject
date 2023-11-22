@@ -2,7 +2,6 @@ zitadel:
   zitadel:
     masterkey: MasterkeyNeedsToHave32Characters
     configSecretName: zitadel-secret
-    configSecretKey: config
     configmapConfig:
       ExternalSecure: false
   
