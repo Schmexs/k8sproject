@@ -7,7 +7,7 @@ postgresql:
         database: "zitadel"
         existingSecret: postgres-secret
         secretKeys:
-          adminPasswordKey: adminPassword
-          userPasswordKey: userPassword
+          adminPasswordKey: adminPasswordKey
+          userPasswordKey: userPasswordKey
   networkPolicy:
     enabled: true
