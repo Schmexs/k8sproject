@@ -11,9 +11,6 @@ velero:
       - name: default
         provider: aws
         bucket: kubernetes
-        credentials: 
-          name: velero-secret
-          key: cloud
         config:
           region: minion
           s3ForcePathStyle: true
@@ -26,3 +23,6 @@ velero:
       template:
         ttl: "240h"
         storageLocation: default
+  credentials:
+    useSecret: true
+    existingSecret: velero-secret
