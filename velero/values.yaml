@@ -11,6 +11,8 @@ velero:
       - name: default
         provider: aws
         bucket: kubernetes
+        default: true
+        accessMode: ReadWrite
         config:
           region: minion
           s3ForcePathStyle: true
