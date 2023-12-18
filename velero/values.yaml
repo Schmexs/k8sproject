@@ -20,7 +20,7 @@ velero:
           s3Url: http://10.3.0.1:9000
   schedules:
     mybackup:
-      disabled: false
+      disabled: true
       schedule: "0 0 * * *"
       useOwnerReferencesInBackup: false
       template:
