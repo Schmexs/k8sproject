@@ -8,7 +8,7 @@ velero:
           name: plugins
   configuration:
     backupStorageLocation:
-      - name: Storage1
+      - name: storage
         provider: aws
         bucket: kubernetes
         credentials: 
