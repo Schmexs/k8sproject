@@ -1,0 +1,28 @@
+velero:
+  initContainers:
+    - name: velero-plugin-for-aws
+      image: velero/velero-plugin-for-aws:v1.8.2
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - mountPath: /target
+          name: plugins
+  configuration:
+    backupStorageLocation:
+      - name: Storage1
+        provider: aws
+        bucket: kubernetes
+        credentials: 
+          name: velero-secret
+          key: backup
+        config:
+          region: minion
+          s3ForcePathStyle: true
+          s3Url: http://10.3.0.1:9000
+  schedules:
+    mybackup:
+      disabled: false
+      schedule: "0 0 * * *"
+      useOwnerReferencesInBackup: false
+      template:
+        ttl: "240h"
+        storageLocation: default
